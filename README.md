@@ -61,6 +61,7 @@ df_cleaned$ended_at <- as.POSIXct(df_cleaned$ended_at, format="%Y-%m-%d %H:%M:%S
 df_cleaned$ride_length <- as.numeric(difftime(df_cleaned$ended_at, df_cleaned$started_at, units = "mins"))
 df_cleaned$hour_of_day <- as.numeric(format(df_cleaned$started_at, "%H"))
 df_cleaned$day_of_week <- weekdays(df_cleaned$started_at)
+```
 
 For the full R script, check: Cyclistic_Analysis.R
 
